@@ -1,4 +1,4 @@
-package com.breno.tenpinbowling;
+package com.breno.tenpinbowling.service;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -23,11 +23,6 @@ public class GameTest {
         String expectedResult = FINAL_RESULT + "300";
         String result = getGameResult(input);
         Assert.assertThat(result, is(expectedResult));
-    }
-
-    private String getGameResult(String[] input) {
-        Game game = new Game();
-        return game.calculateScore(input);
     }
 
     @Test
@@ -122,6 +117,11 @@ public class GameTest {
         String expectedResult = "Input has the 2 first rolls in 10th frame with more than 10 pins in total.";
         String result = getGameResult(input);
         Assert.assertThat(result, is(expectedResult));
+    }
+
+    private String getGameResult(String[] input) {
+        Game game = new Game();
+        return game.calculateScore(input);
     }
 
 }

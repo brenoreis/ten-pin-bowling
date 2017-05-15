@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.breno</groupId>
-    <artifactId>ten-pin-bowling</artifactId>
+    <artifactId>ten-pin-bowling-scoring</artifactId>
     <version>1.0</version>
 
     <dependencies>
@@ -35,6 +35,21 @@
                         <format>html</format>
                         <!-- format>xml</format -->
                     </formats>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- Build an executable JAR -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>com.breno.tenpinbowling.TenPinBowling</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>

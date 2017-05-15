@@ -7,6 +7,10 @@ import com.breno.tenpinbowling.exception.ValidationException;
  */
 public class GameUtil {
 
+    private GameUtil() {
+        throw new AssertionError("Instantiating utility class...");
+    }
+
     public static void validateRolls(String[] rolls) throws ValidationException {
 
         for (String rollString : rolls) {

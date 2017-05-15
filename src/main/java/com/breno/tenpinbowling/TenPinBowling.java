@@ -1,5 +1,7 @@
 package com.breno.tenpinbowling;
 
+import com.breno.tenpinbowling.service.Game;
+
 /**
  * Created by breno.pinto on 12/5/17.
  */
